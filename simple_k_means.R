@@ -71,4 +71,5 @@ km_pca <- replic %>%
   )
 
 ggplot(km_pca, aes(pc1, pc2, color = km)) +
-  geom_point()
+  geom_point(alpha = .6) +
+  scale_color_brewer(palette = "Set1")
