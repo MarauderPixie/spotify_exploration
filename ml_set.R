@@ -1,3 +1,7 @@
+art_count <- t50f %>% 
+  count(artist_id) %>% 
+  filter(n > 100)
+
 ml_set <- t50f %>% 
   filter(artist_id %in% art_count$artist_id) %>% 
   group_by(artist_id) %>% 
